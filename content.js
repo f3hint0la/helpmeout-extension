@@ -61,7 +61,9 @@ const sendChunkToBackend = (chunkData) => {
 };
 
 // listens for when the record button is click and a recording request is sent
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+var port = chrome.runtime.connect();
+port.onMessage.addListener((message, sender, sendResponse) => {
+  console.log(sender.tab);
   if (message.action === "request_recording") {
     console.log("requesting recording...");
     sendResponse(`processed ${message.action}`);
