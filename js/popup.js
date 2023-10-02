@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  let screen = "browser";
   const fullScreen = document.querySelector("#fullscreen");
   const currentTab = document.querySelector("#currenttab");
   const timer = document.querySelector(".timer");
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   startRecordingBtn.addEventListener("click", () => {
+    recordActionContainer.style.display = "flex";
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
       chrome.tabs.sendMessage(
         tabs[0].id,
