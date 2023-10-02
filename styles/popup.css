@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sora:wght@300;400;500;600;700;800&family=Work+Sans:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 300px;
+}
+
+.popup {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  width: 22rem;
+  padding: 1rem;
+  margin: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+  background: #fff;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7rem;
+  padding: 1rem;
+}
+
+.brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand h2 {
+  color: #120b48;
+  font-family: "Sora", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.func {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+p {
+  color: #413c6d;
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin: 0 0.5rem;
+}
+
+.selection {
+  display: flex;
+  padding: 1.5rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.selection .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+}
+
+.selection .item:hover {
+  opacity: 1;
+  transform: scale(0.8);
+}
+
+.selection .item img {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+}
+
+.selection .item span {
+  color: #928fab;
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.selection .item .use {
+  color: #120b48;
+  font-weight: 600;
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.875rem;
+}
+
+.functions {
+  display: flex;
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #100a42;
+}
+
+.functions .item {
+  display: flex;
+  align-items: center;
+}
+
+.functions .item p {
+  color: #100a42;
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.button {
+  position: relative;
+  background: #d2d2d2;
+  width: 2.5rem;
+  height: 1.5rem;
+  border-radius: 1rem;
+  transform: 0.3s;
+  cursor: pointer;
+}
+
+.button::before {
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 0.12rem;
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+
+input {
+  display: none;
+}
+
+input:checked + .button {
+  background: #120b48;
+}
+
+input:checked + .button::before {
+  transform: translateX(1rem);
+}
+
+.recordBtn {
+  display: flex;
+  color: #fafdff;
+  background: #120b48;
+  padding: 1rem 6rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.875rem;
+  margin-top: 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+}
+
+.recordActionContainer {
+  margin: 2rem;
+  display: none;
+  padding: 0.75rem 1rem 0.75rem 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12.5rem;
+  background: #141414;
+}
+
+.recordActionContainer .btn {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.recordActionContainer .btn .ctrl {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recordActionContainer .btn .ctrl .action {
+  display: flex;
+  flex-direction: row;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 2rem;
+  border: 1px solid #fff;
+  background: #fff;
+}
+
+.recordActionContainer .btn .ctrl p {
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding-top: 0.3rem;
+}
+
+.recordActionContainer .btn .trash {
+  display: flex;
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  border-radius: 2rem;
+  border: 1px solid #000;
+  background: #4b4b4b;
+}
+
+.recordedVideo {
+  height: 300px;
+  width: 20rem;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/popup.css" />
+    <title>HelpMeOut</title>
+  </head>
+  <body>
+    <div class="popup">
+      <div class="heading">
+        <div class="brand">
+          <img src="images/logo.png" alt="logo" />
+          <h2>HelpMeOut</h2>
+        </div>
+
+        <div class="func">
+          <img src="images/setting-2.png" alt="settings" />
+          <img class="close" src="images/close-circle.png" alt="close" />
+        </div>
+      </div>
+
+      <p>This extension helps you record and share help videos with ease.</p>
+
+      <div class="selection">
+        <button class="item" id="fullscreen">
+          <img src="images/monitor.png" alt="monitor" />
+          <span>Full Screen</span>
+        </button>
+
+        <button class="item" id="currenttab">
+          <img src="images/copy.png" alt="copy" />
+          <span class="use">Current Tab</span>
+        </button>
+      </div>
+
+      <div class="functions">
+        <div class="item">
+          <img src="images/video-camera.png" alt="video-camera" />
+          <p>Camera</p>
+        </div>
+        <input type="checkbox" id="camera" />
+        <label for="camera" class="button"></label>
+      </div>
+
+      <div class="functions">
+        <div class="item">
+          <img src="images/microphone.png" alt="microphone" />
+          <span>Audio</span>
+        </div>
+        <input type="checkbox" id="audio" />
+        <label for="audio" class="button"></label>
+      </div>
+
+      <button class="recordBtn">Start Recording</button>
+
+      <div class="recordActionContainer">
+        <p class="timer"></p>
+        <div class="btn">
+          <div class="ctrl">
+            <div class="action pause">
+              <img src="images/pause.png" alt="pause" />
+            </div>
+            <p>Pause</p>
+          </div>
+
+          <div class="ctrl">
+            <div class="action stop">
+              <img src="images/stop.png" alt="stop" />
+            </div>
+            <p>Stop</p>
+          </div>
+
+          <div class="ctrl">
+            <div class="action camera">
+              <img src="images/video-camera.png" alt="video-camera" />
+            </div>
+            <p>Camera</p>
+          </div>
+
+          <div class="ctrl">
+            <div class="action audio">
+              <img src="images/microphone.png" alt="microphone" />
+            </div>
+            <p>Mic</p>
+          </div>
+
+          <div class="trash">
+            <img src="images/trash.png" alt="trash" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/popup.js"></script>
+  </body>
+</html>
